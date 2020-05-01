@@ -1,0 +1,70 @@
+form {
+    background-color: #2d353c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 50%;
+}
+
+form div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 0;
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.invalid-feedback {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form input {
+    margin: 10px 0;
+    border: none;
+    padding: 8px 0;
+    width: 100%;
+}
+
+button {
+    color: #00acac;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.admin-button:hover {
+    color: white;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #c7254e;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.form-error-message {
+    font-size: 1.6rem;
+}
+
+button:hover {
+    background-color: white;
+}

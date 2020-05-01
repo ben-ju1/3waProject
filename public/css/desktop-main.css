@@ -1,0 +1,15 @@
+@media all and (min-width:1200px) {
+   #top-banner {
+       width: 30%;
+   }
+    .overlay-menu a {
+        font-size: 3rem;
+    }
+    footer nav ul {
+        flex-wrap: nowrap;
+        padding: 20px 0;
+    }
+    .overlay-menu {
+        width: 40%;
+    }
+}

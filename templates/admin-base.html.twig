@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} Le Rameau - Panel Administrateur {% endblock %}</title>
+    {% block stylesheet %}
+        <link href="{{ asset('css/normalize.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/mobile-main.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/desktop-main.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/admin-main.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/admin/no-mobile.css') }}" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    {% endblock %}
+</head>
+<body>
+<header>
+    <div id="no-mobile">
+        <p><i class="fas fa-mobile-alt"></i></p>
+        <p>Le panel admin n'est pas disponible sur mobile <i class="fas fa-smile-beam"></i></p>
+    </div>
+    <nav class="nav-bar">
+        <ul class="header-ul">
+            <li class="header-admin">
+                <a href="{{ path('admin_home') }}"><h2>Admin panel</h2></a>
+            </li>
+            <li id="title">
+                {% block admintitle %}
+                {% endblock %}
+            </li>
+        </ul>
+    </nav>
+    {% for message in app.flashes('success') %}
+        <div class="flashbag-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% for message in app.flashes('error') %}
+        <div class="flashbag-success" style="background-color: #902b2b">
+            {{ message }}
+        </div>
+    {% endfor %}
+</header>
+<main>
+    <section id="admin-menu">
+        <aside>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{{ path("home") }}"><i class="fas fa-home"></i> Accueil</a>
+                    </li>
+                    <li id="admin-article">
+                        <div>
+                            <p><i class="fas fa-newspaper"></i> Article <i class="fas fa-arrow-right"
+                                                                           id="admin-article-arrow"></i></p>
+                        </div>
+                        <div class="admin-sub-menu" id="admin-article-sub-menu" style="display: none;">
+                            <nav class="sub-link">
+                                <a href="{{ path('admin_article_add') }}" class="sub-options"> <i
+                                            class="fas fa-plus-square"></i> Ajouter un article</a>
+                                <a href="{{ path('admin_category_add') }}" class="sub-options"> <i
+                                            class="fas fa-plus-square"></i> Ajouter une catégorie</a>
+                                <a href="{{ path('admin_category_delete') }}" class="sub-options"> <i
+                                            class="fas fa-plus-square"></i> Supprimer une catégorie</a>
+                            </nav>
+                        </div>
+                    </li>
+                    <li id="admin-user">
+                        <div>
+                            <p><i class="fas fa-user-tag"></i> Utilisateurs <i class="fas fa-arrow-right"
+                                                                               id="admin-user-arrow"></i></p>
+                        </div>
+                        <div class="admin-sub-menu" id="admin-user-sub-menu" style="display: none;">
+                            <nav class="sub-link">
+                                <a href="{{ path('admin_user_management') }}" class="sub-options"> <i
+                                            class="fas fa-plus-square"></i> Gestion rôles
+                                    utilisateurs</a>
+                            </nav>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="{{ path("security_logout") }}"><i class="fas fa-sign-out-alt"></i> Deconnexion</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        {% block main %}
+        {% endblock %}
+    </section>
+</main>
+<footer>
+    {% block footer %}
+    {% endblock %}
+</footer>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+</script>
+<script src="https://kit.fontawesome.com/e552a10175.js" crossorigin="anonymous"></script>
+<script src="{{ asset('js/admin/admin-menu.js') }}"></script>
+<script src="{{ asset('js/flashbag.js') }}"></script>
+{% block javascripts %}
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,88 @@
+
+.background {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 90vh;
+    color: white;
+    background: white url("../../images/test2.jpg") no-repeat bottom/cover;
+}
+
+.second-background {
+    display: flex;
+    background-color: #f4f4f4;
+    flex-direction: column;
+    color: black;
+}
+
+.second-background article:nth-child(odd) {
+    display: flex;
+    text-align: right;
+    margin-top: 50px;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    font-size: 2.3rem;
+    line-height: 1.4;
+}
+
+.second-background article:nth-child(even) {
+    display: flex;
+    text-align: left;
+    margin-top: 50px;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    font-size: 2.3rem;
+}
+
+.second-background div {
+    background-color: white;
+    padding: 40px;
+    line-height: 1.4;
+}
+
+.second-background article:last-child {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    padding-bottom: 40px;
+    margin-top: 50px;
+    margin-bottom: 0;
+    background-color: white;
+}
+
+.second-background article p {
+    letter-spacing: 4px;
+}
+
+.background h1 {
+    margin-bottom: 70px;
+    font-size: 2rem;
+    line-height: 1.5;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.second-background article {
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+.second-background article div {
+    width: 90%;
+    font-size: 1.6rem;
+
+}
+.second-background article:last-child div {
+    width: 100%;
+}
+.second-background article:nth-child(odd) div h2 i {
+    margin-right: 20px;
+}
+.second-background article:nth-child(even) div h2 i {
+    margin-left: 20px;
+}
+

@@ -1,0 +1,25 @@
+@media all and (max-width: 1200px) {
+    #no-mobile {
+        position: absolute;
+        min-height: 100vh;
+        content: '';
+        width: 100%;
+        z-index: 1000;
+        background-color: #2d353c;
+        visibility: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 2rem;
+        text-align: center;
+    }
+#no-mobile p i {
+    font-size: 4rem;
+}
+#no-mobile p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}

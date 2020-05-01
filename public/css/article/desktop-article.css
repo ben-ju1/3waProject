@@ -1,0 +1,34 @@
+@media all and (min-width: 1145px) {
+    /* result search bar */
+    #search {
+        padding-left: 0;
+
+    }
+    /* no result title */
+    #no-result {
+        font-size: 2.3rem;
+    }
+    /* test under article image */
+    figcaption {
+        margin-bottom: 30px;
+    }
+    /* article thumbnails */
+
+    .article-thumbnails img {
+        max-width: 100%;
+        width: 450px;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    .article-thumbnails {
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .article-thumbnails article {
+        width: 40%;
+    }
+    .article-thumbnails figure {
+        width: 90%;
+    }
+}

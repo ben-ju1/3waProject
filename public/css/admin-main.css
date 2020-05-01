@@ -1,0 +1,246 @@
+html {
+    font-size: 8px !important;
+}
+
+header {
+    max-height: 100px;
+}
+
+main {
+    min-height: 100vh;
+    height: 100%;
+    background-color: #d9e0e7;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    padding: 20px 0;
+    background-color: #2d353c;
+    margin-right: 120px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+a {
+    color: white;
+}
+
+h3 {
+    width: 100%;
+    transform: translateX(5%);
+    margin: 0 auto;
+}
+
+
+table {
+    width: 70%;
+    border: solid black 2px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: white;
+    background-color: #2d353c;
+}
+
+i {
+    color: #00acac;
+    margin: 0 10px;
+}
+
+form input, form textarea {
+    width: 80%;
+    border: none;
+    padding: 10px;
+    font-size: 1.6rem;
+}
+
+input[type=file] {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+input[type=file] {
+    font-size: 1.8rem;
+    width: 30%;
+}
+
+td {
+    padding: 15px;
+}
+
+button {
+    cursor: pointer;
+}
+
+form div {
+    margin: 15px 0;
+}
+
+form label {
+    display: block;
+}
+
+aside nav ul {
+    padding-left: 20px !important;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.current {
+    color: white;
+}
+
+.page a {
+    color: black;
+}
+
+.next {
+    display: none;
+    visibility: hidden;
+}
+
+.last a {
+    color: black;
+}
+
+.nav-bar {
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.sub-link {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-link a {
+    margin: 10px 0;
+}
+
+.header-ul {
+    background-color: #2d353c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+}
+
+.header-ul li {
+    color: white;
+    width: 21%;
+    border-right: black solid 2px;
+}
+
+
+.sub-options {
+    font-size: 1.5rem !important;
+}
+
+.display-options {
+    transition: 1s;
+    transform: rotate(90deg);
+}
+
+.admin-button {
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 3px;
+}
+
+.admin-button {
+    border: none;
+}
+
+.admin-button:hover {
+    background-color: #00acac;
+}
+
+.admin-button:hover i {
+    color: white;
+}
+
+.trash {
+    display: flex;
+    justify-content: center;
+}
+
+#trash {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 85%;
+}
+
+#admin-menu {
+    color: white;
+    font-size: 2rem;
+}
+
+#admin-menu aside {
+    width: 20%;
+    background-color: #2d353c;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: black solid 2px;
+}
+
+#admin-menu aside nav {
+    width: 100%;
+}
+
+#admin-menu aside nav ul li a {
+    font-size: 2rem;
+    text-transform: none;
+}
+
+#admin-menu aside nav ul li {
+    margin: 40px 0;
+    width: 100%;
+}
+
+#admin-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#title {
+    width: 85% !important;
+    border-right: none !important;
+}
+
+#no-mobile {
+    display: none;
+    visibility: hidden;
+}
+
+.flashbag-success-delete {
+    background-color: #dc3545;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 67px;
+}
+
+.flashbag-success {
+    top: 67px;
+    background-color: #67b168 !important;
+}

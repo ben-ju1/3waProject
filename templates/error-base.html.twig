@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} Le Rameau | ERROR {% endblock %}</title>
+    {% block stylesheet %}
+        <link href="{{ asset('css/normalize.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/error/mobile-main.css') }}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Volkhov&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kreon&display=swap" rel="stylesheet">
+    {% endblock %}
+</head>
+<body>
+<header>
+</header>
+<main>
+    {% block main %}
+    {% endblock %}
+</main>
+
+<footer>
+    {% block footer %}
+
+    {% endblock %}
+</footer>
+
+{% block javascripts %}
+    <script src="https://kit.fontawesome.com/e552a10175.js" crossorigin="anonymous"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous">
+    </script>
+    <script src="{{ asset('js/burger-menu.js') }}"></script>
+    <script src="{{ asset('js/login-submenu.js') }}"></script>
+    <script src="{{ asset('js/flashbag.js') }}"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxQPRo_7ra-gslPdThaY93luphLtmRFEk&callback=initMap"
+            type="text/javascript"></script>
+{% endblock %}
+</body>
+</html>

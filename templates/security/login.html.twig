@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le Rameau - Se connecter : Église ACF{% endblock %}
+{% block stylesheet %}
+    {{ parent() }}
+    <link href="{{ asset("css/security/mobile-login.css") }}" rel="stylesheet">
+    <link href="{{ asset("css/security/desktop-login.css") }}" rel="stylesheet">
+{% endblock %}
+{% block main %}
+    <div class="form">
+        <form action="{{ path('security_login') }}" method="post">
+            {% if error %}
+                {% if error.message == 'Bad credentials.' %}
+                    <h3 class="has-error">Le nom d'utilisateur ou le mot de passe est incorrect</h3>
+                {% endif %}
+            {% endif %}
+            <div>
+            <label for="_username"><strong>Nom d'utilisateur</strong></label>
+                <input type="text" name="_username" required="required" maxlength="50" value="{{ last_username }}" placeholder="JohnDoe123">
+            </div>
+            <div>
+            <label for="_password"><strong>Mot de passe</strong></label>
+                <input type="password" name="_password" required="required" maxlength="50">
+            </div>
+            <button type="submit" class="login-btn">Connexion</button>
+        </form>
+    </div>
+{% endblock %}

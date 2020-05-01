@@ -1,0 +1,22 @@
+
+
+
+
+button {
+    width: 50%;
+    cursor: pointer;
+}
+
+
+
+form textarea {
+    height: 100px;
+}
+
+
+
+
+
+#admin-menu {
+    justify-content: space-between;
+}

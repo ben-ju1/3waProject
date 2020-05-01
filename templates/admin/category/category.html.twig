@@ -1,0 +1,12 @@
+{% extends 'admin-base.html.twig' %}
+
+{% block stylesheet %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/admin/user/management.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/home-panel.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/category/category.css') }}">
+{% endblock %}
+{% block main %}
+    {{ form_start(form) }}
+    {{ form_end(form) }}
+{% endblock %}

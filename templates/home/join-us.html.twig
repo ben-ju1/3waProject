@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le Rameau - Rejoignez-nous : Église ACF{% endblock %}
+{% block stylesheet %}
+    {{ parent() }}
+    <link href="{{ asset('css/home/join-us/mobile-main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/home/join-us/desktop-main.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+    <section>
+        <article>
+            <iframe height="400" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=23%20rue%20d'alpignano%20Fontaine&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+        </article>
+    </section>
+    <section class="presentation">
+        <article>
+            <h3>Notre planing </h3>
+            <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+            <ul>
+                <li>
+                    <p>Jeudi <img src="https://img.icons8.com/android/96/000000/down.png"/>
+                        <span>20 h - 21 h temps de prières</span>
+                    </p>
+                </li>
+                <li><p>Dimanche <img src="https://img.icons8.com/android/96/000000/down.png"/>
+                        <span>9 h 30 - 10 h Accueil café</span>
+                        <span>10 h - 12 h Culte</span>
+                    </p>
+                </li>
+                <li>
+                    <p>Réunion exceptionnel <img src="https://img.icons8.com/android/96/000000/down.png"/>
+                        <span>1 mardi tous les 2 mois sur un thème spécifique</span>
+                    </p>
+                </li>
+                <li><p></p></li>
+            </ul>
+        </article>
+
+    </section>
+{% endblock %}
+{% block javascripts %}
+{% endblock %}

@@ -1,0 +1,93 @@
+main {
+    min-height: 100vh;
+}
+
+/* search bar article */
+#search {
+    width: 100%;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+}
+
+#search-bar {
+    padding: 15px 0 15px 0;
+    width: 100%;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+
+/* No result title */
+#no-result {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+#no-result img {
+    width: 50px;
+    height: auto;
+}
+
+/* article search thumbnails */
+.article-thumbnails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+.article-thumbnails article {
+    margin: 60px 0;
+    background-color: white;
+    display: flex;
+    color: black;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+}
+.article-thumbnails article figure div:first-of-type a {
+    height: 400px;
+    display: block;
+    cursor: pointer;
+}
+.article-thumbnails img {
+    max-height: 100%;
+}
+
+/* text thumbnails and date */
+figure {
+    margin: 0 auto;
+    width: 90%;
+    padding: 0 15px;
+}
+
+figcaption {
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.date {
+    letter-spacing: 3px;
+}
+.pagination {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+.page a {
+    padding: 10px 15px;
+}

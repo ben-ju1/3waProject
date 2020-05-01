@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block title %}Le Rameau - Profile utilisateur{% endblock %}
+
+{% block stylesheet %}
+    {{ parent() }}
+
+    <link href="{{ asset('css/user/mobile-profile.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/user/desktop-profile.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+    <div>
+        {#        Gestion des flashbags                 #}
+        {% for message in app.flashes('personnal_success') %}
+            <div class="flash success-flash">
+                <span>{{ message }} <i class="fas fa-check-square" style="color: white"></i></span>
+            </div>
+        {% endfor %}
+        {% for message in app.flashes('account_success') %}
+            <div class="flash success-flash">
+                <span>{{ message }} <i class="fas fa-check-square" style="color: white"></i></span>
+            </div>
+        {% endfor %}
+        {% for message in app.flashes('error') %}
+            <div class="flash delete-flash">
+                <span>{{ message }} <i class="fas fa-check-square" style="color: white"></i></span>
+            </div>
+        {% endfor %}
+    </div>
+    <section>
+        <article>
+            <nav>
+                <ul id="settings-user">
+                    <li class="profile">
+                        <img src="https://img.icons8.com/ios-glyphs/60/000000/user--v1.png" class="profile"
+                             id="profile"><span class="hide-on-mobile profile">Profile</span>
+                    </li>
+                    <li class="security">
+                        <img src="https://img.icons8.com/windows/64/000000/user-credentials.png" class="security"><span
+                                class="hide-on-mobile security">Securité</span>
+                    </li>
+                    <li class="informations">
+                        <img src="https://img.icons8.com/windows/64/000000/settings-3.png" class="informations"><span
+                                class="hide-on-mobile informations">Informations</span>
+                    </li>
+                </ul>
+            </nav>
+        </article>
+        <article class="display" style="display:none;">
+        </article>
+        <article class="display-profile">
+            <p id="welcome">Bonjour, <em><strong>{{ username }}</strong></em> vous êtes enregistré sous le nom de
+                <strong>{{ user.firstname }} {{ user.lastname }}</strong>
+                <br>
+                Votre adresse email est : <strong>{{ user.email }}</strong>
+                <br>
+                Pour modifiez vos informations veuillez cliquez sur le menu de navigation
+            </p>
+        </article>
+    </section>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/user/account-settings.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,8 @@
+@media all and (min-width: 1145px) {
+    article figure {
+        width: 50%;
+    }
+    figcaption {
+        font-size: 1.7rem;
+    }
+}

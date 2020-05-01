@@ -1,0 +1,25 @@
+header {
+    background-color:#2d353c;
+}
+.nav-bar {
+    width: 100%;
+}
+.nav-bar h2 {
+    margin: 0 auto;
+    padding: 20px 0;
+    margin-left: 20px;
+}
+h2, a {
+    color:white;
+}
+table {
+    text-align: center;
+    margin-top: 0;
+    background-color: #2d353c;
+}
+form {
+    background-color: #d9e0e7;
+}
+#admin-menu {
+    justify-content: flex-start;
+}

@@ -1,0 +1,139 @@
+main {
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+section article {
+    width: 90%;
+
+}
+form div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section article nav {
+    background-color: white;
+}
+form {
+    width: 90%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+form div {
+    margin: 20px 0;
+}
+input {
+    margin-top: 20px;
+    width: 90%;
+    border: none;
+    padding: 10px 0;
+}
+#settings-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    text-align: center;
+    margin: 0 auto;
+}
+#settings-user li {
+    padding: 30px 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    width: 100%;
+    cursor: pointer;
+    transition: .2s;
+}
+#settings-user li:hover {
+    font-size: 3rem;
+    transition: .4s;
+}
+#settings-user li img {
+    width: 30px;
+    margin-right: 10px;
+}
+.display, .display-profile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    padding: 30px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+/* bootstrap like error */
+
+.d-block {
+    display:block !important;
+    padding: 5px 0;
+    font-size: 1.3em;
+}
+.invalid-feedback {
+    font-size:80%;
+    color: #dc3545;
+}
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+.badge-danger {
+    color: #fff;
+    background-color: #dc3545;
+}
+.badge {
+    display:inline-block;
+    padding: .25em .4em;
+    font-size:75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space:nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+
+}
+#welcome {
+    line-height: 2;
+    letter-spacing: 1px;
+    width: 90%;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    min-height: 40vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#welcome strong {
+    margin: 10px 0;
+}
+.read-more {
+    background-color: white;
+    border: solid 1px black;
+    color:black;
+    cursor: pointer;
+}
+.read-more:hover {
+    background-color: black;
+    color:white;
+    border: solid 1px white;
+}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block title %}Le Rameau - Retrouvez nos articles{% endblock %}
+{% block stylesheet %}
+    {{ parent() }}
+    <link href="{{ asset('css/article/full/mobile-main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/article/full/desktop-main.css') }}" rel="stylesheet">
+{% endblock %}
+{% block main %}
+    <article>
+        <figure>
+            <h2>{{ article.title }}</h2>
+            <img src="../{{ uploaded_asset(article.image) }}">
+            <figcaption>{{ article.content | raw }}</figcaption>
+            <span class="date"><strong>{{ article.createdAt | date('d/m/Y') }}</strong></span>
+        </figure>
+    </article>
+{% endblock %}

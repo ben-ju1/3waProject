@@ -1,0 +1,155 @@
+header {
+    top: 0;
+    left: 0;
+}
+
+/* title */
+section h2 {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+section h2 img {
+    width: 50px;
+    margin: 0 20px 0 0;
+}
+
+/* text center top */
+#relative {
+    position: relative;
+
+}
+
+#relative article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title-church {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    top: 25%;
+    margin: 0 auto;
+    color: white;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    width: 85%;
+    text-shadow: black 1px 1px 4px;
+}
+
+/* background */
+
+.background {
+    filter: blur(1px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    background: white url("../../../images/tree.jpg") no-repeat bottom/cover;
+}
+
+.center-title h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background h1 span {
+    display: block;
+    text-align: left;
+}
+
+/* background team */
+.church-team {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.church-team h3 {
+    width: 100%;
+    padding: 30px 0;
+    margin: 40px 0;
+}
+
+/* color of each member */
+.cyril {
+    background-color: #843534;
+}
+
+.agnes {
+    background-color: #00acac;
+}
+
+.joseph {
+    background-color: #2e6da4;
+}
+
+.sabine {
+    background-color: #8959A8;
+}
+
+.church-team h3 span {
+    margin-left: 30px;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+/* background 3 vision */
+.our-vision {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-vision article {
+    padding: 10px 0 20px 0;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.vision {
+    font-size: 1.8rem;
+    width: 90%;
+    line-height: 1.4;
+}
+.vision span {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+/* faith church */
+
+.faith {
+    margin-top: 60px;
+    color:black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.faith article div {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.faith-list {
+    width: 90%;
+    list-style-type: circle;
+    line-height: 1.4;
+    padding: 15px 0px 15px 10px;
+}
+
+

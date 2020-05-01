@@ -1,0 +1,27 @@
+{% extends 'admin-base.html.twig' %}
+{% block title %}Le Rameau - Gestion d'article{% endblock %}
+{% block stylesheet %}
+    {{ parent() }}
+    <link href="{{ asset("css/admin/article/add-article.css") }}" rel="stylesheet">
+{% endblock %}
+{% block admintitle %}
+        <div class="title">
+            <h3>
+                {% if isEdit == false %}
+                    Ajout d'un nouvel article
+                {% else %}
+                    Modification de l'article
+                {% endif %}
+            </h3>
+        </div>
+{% endblock %}
+{% block main %}
+    {{ form_start(formArticle) }}
+    {{ form_row(formArticle.title) }}
+    {{ form_row(formArticle.content) }}
+    {{ form_row(formArticle.image) }}
+    {{ form_end(formArticle) }}
+{% endblock %}
+{% block javascripts %}
+<script src="{{ asset('js/admin/delete-article.js') }}"></script>
+{% endblock %}

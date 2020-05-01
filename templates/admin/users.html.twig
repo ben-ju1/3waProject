@@ -1,0 +1,94 @@
+{% extends 'admin-base.html.twig' %}
+{% block title %}
+    Le Rameau - Gestion utilisateur
+{% endblock %}
+
+{% block stylesheet %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/admin/user/management.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/home-panel.css') }}">
+{% endblock %}
+
+{% block main %}
+    {% if user is not defined %}
+        <table>
+            <tr>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Editer</th>
+            </tr>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.firstname }}</td>
+                    <td>{{ user.lastname }}</td>
+                    <td><b>{{ user.username }}</b></td>
+                    <td>{{ user.email }}</td>
+                    <td><a href="{{ path('admin_user_management', {user: user.id}) }}" class="admin-button"><i
+                                    class="fas fa-user-edit"></i></a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <form action="{{ path('admin_user_management', {user: user.id}) }}" name="user-edit" method="post" id="trash">
+            <table>
+                <tr>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Roles</th>
+                    <th>Supprimer</th>
+                    <th>Valider</th>
+                </tr>
+                <tr>
+                    <td>{{ user.firstname }}</td>
+                    <td>{{ user.lastname }}</td>
+                    <td><b>{{ user.username }}</b></td>
+                    <td>{{ user.email }}</td>
+                    <td>
+                        <select name="roles" id="roles">
+                            <option
+                                    {% if user.roles[0] is same as ('ROLE_ADMIN') %}
+                                        selected
+                                    {% endif %}
+                                    value="ROLE_ADMIN"
+                            >ROLE_ADMIN
+                            </option>
+                            <option
+                                    {% if user.roles[0] is same as ('ROLE_VERIFIED') %}
+                                        selected
+                                    {% endif %}
+                                    value="ROLE_VERIFIED"
+                            >ROLE_VERIFIED
+                            </option>
+                            <option
+                                    {% if user.roles[0] is same as ('ROLE_USER') %}
+                                        selected
+                                    {% endif %}
+                                    value="ROLE_USER"
+                            >ROLE_USER
+                            </option>
+                        </select>
+                    </td>
+                    <td class="trash"><a href="{{ path('admin_user_delete', {user: user.id}) }}" class="admin-button delete-user"><i
+                                    class="fas fa-trash-alt"></i></a></td>
+                    <td>
+                        <button type="submit" class="admin-button">Valider</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    {% endif %}
+    {% if form is defined %}
+    {{ form_start(form) }}
+    {{ form_end(form) }}
+    {% endif %}
+    {% if users is defined %}
+    {{ knp_pagination_render(users) }}
+    {% endif %}
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('js/admin/delete-user.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le Rameau - Église ACF{% endblock %}
+{% block stylesheet %}
+    {{ parent() }}
+    <link href="{{ asset("css/home/mobile-home.css") }}" rel="stylesheet">
+    <link href="{{ asset("css/home/desktop-home.css") }}" rel="stylesheet">
+{% endblock %}
+{% block main %}
+    <section class="background">
+        <h1>« Annoncer l'évangile, servir et grandir dans la maturité »</h1>
+    </section>
+    <section class="second-background">
+        <article>
+            <div>
+                <h2><i class="fas fa-dove"></i> Une église qui annonce l'évangile</h2>
+                <p>« Peu importe ce que tu écris ici tant que ça fait assez de charactères »</p>
+            </div>
+        </article>
+        <article>
+            <div>
+                <h2>Une église qui grandit <i class="fas fa-seedling"></i></h2>
+                <p>« Peu importe ce que tu écris ici tant que ça fait assez de charactères »</p>
+            </div>
+        </article>
+        <article>
+            <div>
+                <h2><i class="fas fa-bible"></i> Une église qui se nourrit</h2>
+                <p>« Peu importe ce que tu écris ici tant que ça fait assez de charactères »</p>
+            </div>
+        </article>
+        <article>
+            <div>
+                <h2>Une église qui prie <i class="fas fa-praying-hands"></i></h2>
+                <p>« Peu importe ce que tu écris ici tant que ça fait assez de charactères »</p>
+            </div>
+        </article>
+    </section>
+{% endblock %}

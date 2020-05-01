@@ -1,0 +1,106 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+main .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    min-height: 100vh;
+}
+main .container form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    border-radius: 3px;
+    padding: 20px 0 40px 0;
+    margin: 0 auto;
+    width: 90%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+form div {
+    padding: 10px 0;
+    width: 100%;
+}
+form input {
+    border:none;
+    padding: 10px 0;
+    width: 80%;
+}
+form label {
+    padding-bottom: 10px;
+    width: 100%;
+}
+.read-more {
+    border: solid 1px black;
+    background-color: white;
+    color:black;
+    margin: 5px 0;
+    cursor: pointer;
+}
+.read-more:hover {
+    background-color: black;
+    border: solid 1px white;
+    color:white;
+}
+/* error message bootstrap like */
+.invalid-feedback {
+    font-size: 80%;
+    color: #dc3545;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.badge-danger {
+    color: #fff;
+    background-color: #dc3545;
+}
+
+.badge {
+    transition: none;
+}
+
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+
+.d-block {
+    text-align: center;
+    margin: 5px 0;
+}
+.invalid-feedback {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+

@@ -1,0 +1,21 @@
+@media all and (min-width: 1200px) {
+    .background h1 {
+        margin-bottom: 70px;
+        display:flex;
+        justify-content: center;
+        font-size: 2.5rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+    .background {
+        display:flex;
+        justify-content: flex-end;
+    }
+    .second-background article div {
+        width: 70%;
+        font-size: 2.2rem;
+    }
+    .second-background article div:last-child {
+
+    }
+}

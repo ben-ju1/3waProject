@@ -1,0 +1,47 @@
+{% block main %}
+    {{ form_start(form) }}
+    {{ form_end(form) }}
+{% endblock %}
+<script>
+    $('#personnalSettingsForm').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: $(this).attr('method'),
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            success: function (data) {
+                if (data.message === "error") {
+                    $('.display').empty().append(data.personnalSettings.content);
+                }
+                if (data.message === "success") {
+                    location.reload();
+                }
+            }
+        });
+    });
+    </script>
+<script>
+    $('#accountSettingsForm').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: $(this).attr('method'),
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            success: function (data) {
+                        if (data.message === "error") {
+                            console.log('erreur');
+                            $('.display').empty().append(data.accountSettings.content);
+                        } else if (data.message === "invalid_password") {
+                            $('#account_settings_actualPassword').val('').css('background-color', '#dc3545');
+                        }
+                        else if (data.message === "success") {
+                            location.reload();
+                        }
+                    }
+            })
+        });
+</script>
+{% block javascripts %}
+    <script src="{{ asset('js/user/account-settings.js') }}"></script>
+    <script src="{{ asset('js/user/form-user.js') }}"></script>
+{% endblock %}
